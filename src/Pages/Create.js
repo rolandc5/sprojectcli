@@ -29,9 +29,9 @@ export default class Create extends Component {
   handleInput(e) {
     let name = e.target.name;
     let value = e.target.value;
+    console.log(value);
     if (name === 'tags') {
      let tags = value.split(',');
-     console.log(this.state.tags);
      this.setState({ [name]: tags });
      return;
     }
@@ -92,7 +92,7 @@ export default class Create extends Component {
             <input className='c-inputStyle' name='projectName' placeholder='Project Name' onChange={ this.handleInput }/>
             Picture:
             <input className='c-uploadStyle' id='file-1' type="file" name="picture" accept="image/png, image/jpeg" onChange={ this.handleInput }/>
-            <textarea className='c-inputStyle c-textArea' name='projectInfo' placeholder='Project Information' onChange={ this.handleInput }/>
+            <input className='c-inputStyle' type='textarea' name='projectInfo' placeholder='Project Information' onChange={ this.handleInput }/>
             <input className='c-inputStyle' name='link' placeholder='Link' onChange={ this.handleInput }/>
             <input className='c-inputStyle' name='github' placeholder='Github' onChange={ this.handleInput }/>
             <input className='c-inputStyle' name='tags' placeholder='tags (separated by commas)' onChange={ this.handleInput }/>
