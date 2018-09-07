@@ -8,7 +8,7 @@ export default class Menu extends Component {
         <div className='m-wrapper'>
 
           <div className='m-menuContainer'>
-            <Link className='m-title' to='/'>ShowCase</Link>
+            <Link className='m-title' to='/'>SHOWABEL</Link>
 
             <div style={{ width: "60%" }}/>
 
