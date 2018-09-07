@@ -53,7 +53,7 @@ export default class Create extends Component {
     axios.post(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`,
        formData, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
       .then((response) => {
-        axios.post('http://localhost:3030/createProject', { projectName: a.projectName, createdBy: a.createdBy, picture: response.data.secure_url, projectInfo: a.projectInfo, link: a.link, github: a.github, tags: a.tags })
+        axios.post('https://showabledb.herokuapp.com/createProject', { projectName: a.projectName, createdBy: a.createdBy, picture: response.data.secure_url, projectInfo: a.projectInfo, link: a.link, github: a.github, tags: a.tags })
           .then(response => {
             this.setState({ pressed: 2 }, () => {
               console.log(this.state.pressed);

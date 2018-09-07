@@ -54,7 +54,7 @@ export default class Projects extends Component {
       this.setState({ id: id });
     }
   	window.addEventListener('resize', this.handleResize);
-    axios.get('http://localhost:3030/getProject')
+    axios.get('https://showabledb.herokuapp.com/getProject')
       .then(response => {
         this.setState({ projects: response.data.reverse() }, () => {
            this.handleStubs(response.data);

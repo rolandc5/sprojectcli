@@ -14,7 +14,7 @@ export default class DisplayProject extends Component {
 
   handleLink = () => {
     let id = window.location.href.split('=')[1];
-    axios.put('http://localhost:3030/getOne', { id })
+    axios.put('https://showabledb.herokuapp.com/getOne', { id })
       .then(response => {
         this.setState({ project: response.data, loading: 1 });
       })
@@ -75,6 +75,7 @@ export default class DisplayProject extends Component {
                     <div style={{ width: '1em' }}/>
                     <a className='d-linkStyle' href={ this.state.project.github }> code </a>
                   </div>
+                  <div style={{ height: '0.5em' }}/>
                   <div>
                     { this.state.project.tags }
                   </div>
