@@ -86,8 +86,8 @@ export default class Create extends Component {
         <div className='c-wrapper'>
           <div className='c-inputForm'>
             { this.state.error.length > 0 ? <span className='animated fadeIn' style={{ color: 'red' }}> All fields required for input <div style={{ height: '1em' }}/></span> : null }
-            Contributors
-            <input className='c-inputStyle' name='createdBy' placeholder='Created By (separated by commas)' onChange={ this.handleInput }/>
+            Author
+            <input className='c-inputStyle' name='createdBy' placeholder='Created By' onChange={ this.handleInput }/>
             Project Contents
             <input className='c-inputStyle' name='projectName' placeholder='Project Name' onChange={ this.handleInput }/>
             Picture:
