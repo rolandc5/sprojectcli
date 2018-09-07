@@ -21,13 +21,13 @@ export default class Projects extends Component {
     let fetched = e.length;
     let divisible = 4;
     let count = 0;
-    if (this.state.windowWidth <= 1279) {
+    if (this.state.windowWidth <= 1407) {
       divisible = 3;
     }
-    if (this.state.windowWidth <= 833) {
+    if (this.state.windowWidth <= 1055) {
       divisible = 2;
     }
-    if (this.state.windowWidth <= 543) {
+    if (this.state.windowWidth <= 703) {
       divisible = 1;
     }
     if (list === 0) {

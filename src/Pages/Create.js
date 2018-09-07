@@ -20,6 +20,7 @@ export default class Create extends Component {
       github: '',
       tags: [],
       pressed: 0,
+      error: '',
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleSend = this.handleSend.bind(this);
@@ -30,6 +31,7 @@ export default class Create extends Component {
     let value = e.target.value;
     if (name === 'tags') {
      let tags = value.split(',');
+     console.log(this.state.tags);
      this.setState({ [name]: tags });
      return;
     }
@@ -69,6 +71,7 @@ export default class Create extends Component {
   handleSend() {
     let a = this.state;
     if (!a.projectName || !a.createdBy || !a.picture ||!a.projectInfo || !a.link || !a.github || !a.tags) {
+      this.setState({ error: 'Input required fields' });
       return;
     };
     this.setState({ pressed: 1 }, () => {
@@ -82,13 +85,14 @@ export default class Create extends Component {
         <div style={{ height: '4em' }}/>
         <div className='c-wrapper'>
           <div className='c-inputForm'>
+            { this.state.error.length > 0 ? <span className='animated fadeIn' style={{ color: 'red' }}> All fields required for input <div style={{ height: '1em' }}/></span> : null }
             Contributors
             <input className='c-inputStyle' name='createdBy' placeholder='Created By (separated by commas)' onChange={ this.handleInput }/>
             Project Contents
             <input className='c-inputStyle' name='projectName' placeholder='Project Name' onChange={ this.handleInput }/>
             Picture:
             <input className='c-uploadStyle' id='file-1' type="file" name="picture" accept="image/png, image/jpeg" onChange={ this.handleInput }/>
-            <input className='c-inputStyle' name='projectInfo' placeholder='Project Information' onChange={ this.handleInput }/>
+            <textarea className='c-inputStyle c-textArea' name='projectInfo' placeholder='Project Information' onChange={ this.handleInput }/>
             <input className='c-inputStyle' name='link' placeholder='Link' onChange={ this.handleInput }/>
             <input className='c-inputStyle' name='github' placeholder='Github' onChange={ this.handleInput }/>
             <input className='c-inputStyle' name='tags' placeholder='tags (separated by commas)' onChange={ this.handleInput }/>

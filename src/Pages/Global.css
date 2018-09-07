@@ -20,6 +20,7 @@
 
 .m-title {
   font-size: 150%;
+  text-decoration: none;
   font-weight: bold;
   color: lightGray;
   border: none;
@@ -82,7 +83,7 @@ Projects
 }
 
 .p-projectsContainer {
-  max-width: 80em;
+  max-width: 90em;
   width: 100%;
 }
 
@@ -109,8 +110,8 @@ Projects
   border-radius: 5px;
   background-color: white;
   box-shadow: 2px 2px 5px 0px gray;
-  width: 18em;
-  height: 15em;
+  width: 20em;
+  height: 16em;
   margin: 1em;
   transition: 0.1s ease;
 }
@@ -126,7 +127,7 @@ Projects
 
 .p-picture {
   max-width: 100%;
-  height: 14em;
+  height: 15em;
 }
 
 .p-titleContainer {
@@ -157,8 +158,8 @@ Projects
 
 .p-stubProject {
   border: none;
-  width: 18em;
-  height: 15em;
+  width: 20em;
+  height: 16em;
   margin: 1em;
 }
 
@@ -288,6 +289,14 @@ DisplayProject
   margin: 0.5em;
   width: 25em;
   border: none;
+}
+
+.c-textArea {
+  height: 10em;
+  width: 25.71em;
+  font-family: inherit;
+  font-size: 13px;
+  resize: none;
 }
 
 .c-buttonP {
