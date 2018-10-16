@@ -1,0 +1,306 @@
+
+
+.m-container {
+  margin: 0;
+  padding: 0;
+}
+
+.m-wrapper {
+
+}
+
+.m-menuContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  justify-content: center;
+  background-color: #353535;
+  box-shadow: 0.1px 5px 7px #888888;
+}
+
+.m-title {
+  font-size: 150%;
+  text-decoration: none;
+  font-weight: bold;
+  color: lightGray;
+  border: none;
+  background-color: inherit;
+}
+
+.m-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.m-navButton {
+  border: none;
+  background-color: inherit;
+  font-size: 100%;
+  color: lightGray;
+}
+
+.m-bottomNav {
+  background-color: white;
+  padding: 0.5em;
+  box-shadow: 0.1px 5px 7px #888888;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.m-navBottomButton {
+  border: none;
+  background-color: inherit;
+  font-size: 100%;
+  color: black;
+}
+
+.m-projectCreate {
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  color: black;
+}
+
+.m-projectCreate:hover {
+  transition: 0.1s ease;
+    color: gray;
+}
+
+
+/*
+Projects
+*/
+
+.p-container {
+  padding: 0;
+  margin: 0;
+}
+
+.p-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.p-projectsContainer {
+  max-width: 90em;
+  width: 100%;
+}
+
+.p-projectList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.p-iProjectContainer {
+  margin-bottom: 2em;
+}
+
+.p-linkStyle {
+  color: black;
+  text-decoration: none;
+}
+
+.p-project {
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 5px 0px gray;
+  width: 20em;
+  height: 16em;
+  margin: 1em;
+  transition: 0.1s ease;
+}
+
+.p-project:hover {
+  filter: opacity(80%);
+  transition: 0.1s ease;
+}
+
+.p-pictureContainer {
+  padding: 0.5em;
+}
+
+.p-picture {
+  max-width: 100%;
+  height: 15em;
+}
+
+.p-titleContainer {
+  text-align: center;
+  padding: 5px;
+}
+
+.p-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.p-avatarContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.p-avatar {
+  width: 2em;
+  height: 2em;
+  border-radius: 100px;
+}
+
+.p-createdByName {
+  padding: 5px;
+  color: #5d5d5d;
+}
+
+.p-stubProject {
+  border: none;
+  width: 20em;
+  height: 16em;
+  margin: 1em;
+}
+
+.p-failed-loading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+
+}
+
+/*
+DisplayProject
+*/
+
+.d-container {
+  padding: 0;
+  margin: 0;
+}
+
+.d-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-projectContainerCentered {
+  display: flex;
+  justify-content: center;
+}
+
+.d-projectContainer {
+  width: 50em;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 5px 0px gray;
+  border-radius: 15px;
+}
+
+
+.d-topContainer {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.d-titleContainer {
+  padding: 1.5em;
+  border: none;
+  width: 70%;
+}
+
+.d-bottonContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5em;
+  border: none;
+  width: 70%;
+}
+
+.d-button {
+  width: 6em;
+  height: 3em;
+  background-color: lightgray;
+  border: solid 0.1px black;
+}
+
+
+.d-projectName {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.d-picture {
+  width: 100%;
+  height: 100%;
+}
+
+.d-bottomContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 1.5em;
+}
+
+.d-leftInfo {
+  width: 75%;
+}
+
+.d-rightInfo {
+  width: 30%;
+}
+
+.d-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.d-linkStyle {
+  border: solid 0.1px;
+  text-decoration: none;
+  padding: 0.2em;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+/*
+  Create
+*/
+
+.c-container {
+  padding: 0;
+  margin: 0;
+}
+
+.c-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.c-inputForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-inputStyle {
+  padding: 1em;
+  margin: 0.5em;
+  width: 25em;
+  border: none;
+}
+
+.c-textArea {
+  height: 10em;
+  width: 25.71em;
+  font-family: inherit;
+  font-size: 13px;
+  resize: none;
+}
+
+.c-buttonP {
+  display: flex;
+  justify-content: center;
+}
