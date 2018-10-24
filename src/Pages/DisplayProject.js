@@ -3,41 +3,52 @@ import axios from 'axios';
 import Projects from './Projects';
 
 export default class DisplayProject extends Component {
-  constructor() {
-    super();
-    this.state = {
-      project: {},
-      loading: 0
-    }
-  }
+	constructor() {
+		super();
+		this.state = {
+		project: {},
+		loading: 0
+		}
+	}
 
-  handleLink = () => {
-    let id = window.location.href.split('=')[1];
-    axios.put('https://showabledb.herokuapp.com/getOne', { id })
-      .then(response => {
-        this.setState({ project: response.data, loading: 1 });
-      })
-      .catch(err => {
-        console.log(err);
-      })
-  }
+	handleLink = () => {
+		let id = window.location.href.split('=')[1];
+		axios.put('https://showabledb.herokuapp.com/getOne', { id })
+		.then(response => {
+			this.setState({ project: response.data, loading: 1 });
+		})
+		.catch(err => {
+			console.log(err);
+		})
+	}
 
-  componentDidMount = () => {
-    this.handleLink();
-  };
+	componentDidMount = () => {
+		this.handleLink();
+	};
 
-  componentWillMount = () => {
-    this.handleLink ();
-  }
+	componentWillMount = () => {
+		this.handleLink ();
+	}
 
-  render = () => {
-    return (
-      <div className='d-container'>
-        <div style={{ height: "4em" }}/>
-        <div className='d-wrapper'>
-          { this.state.loading === 0 ? <div  style={{ height: 1000 }}/> :
-          <div className='d-projectContainerCentered'>
-            <div className='d-projectContainer'>
+	render = () => {
+		return (
+		<div className='d-container'>
+			<div className='d-wrapper'>
+			{ this.state.loading === 0 ? <div  style={{ height: 1000 }}/> :
+			<div className='d-projectContainerCentered'>
+				<img className='d-picture' src={ this.state.project.picture } alt='not found'/>
+			</div>
+			}
+			<Projects/>
+			</div>
+			<div style={{ height: "4em" }}/>
+		</div>
+		)
+	}
+}
+
+/*
+   <div className='d-projectContainer'>
 
               <div className='d-topContainer'>
 
@@ -83,12 +94,4 @@ export default class DisplayProject extends Component {
               </div>
 
             </div>
-          </div>
-        }
-        <Projects/>
-        </div>
-        <div style={{ height: "4em" }}/>
-      </div>
-    )
-  }
-}
+*/

@@ -1,36 +1,40 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class Menu extends Component {
-  render() {
-    return (
-      <div className='m-container'>
-        <div className='m-wrapper'>
-
-          <div className='m-menuContainer'>
-            <Link className='m-title' to='/'>SHOWABEL</Link>
-
-            <div style={{ width: "60%" }}/>
-
-            <nav className='m-navigation'>
-              <button className='m-navButton'> Sign in </button>
-              <div style={{ width: "1em" }}/>
-              <button className='m-navButton'> Sign up </button>
-            </nav>
-          </div>
-
-
-
-          <div className='m-bottomNav'>
-
-          <a className='m-projectCreate' href='/create'>Create Project</a>
-
-          </div>
-
-        </div>
-      </div>
-    )
-  }
+    handleCreateButton = () => {
+        console.log('hello');
+    }
+    render() {
+        return (
+            <div className='n-container'>
+                <div className='n-wrapper'>
+                    <div className='n-navContainer'>
+                        <div className='n-leftNav'>
+                            <span>
+                                <div className='n-bar'/>
+                                <div style={{ height: 2 }}/>
+                                <div className='n-bar'/>
+                                <div style={{ height: 2 }}/>
+                                <div className='n-bar'/>
+                            </span>
+                            <span className='n-menu'>menu</span>
+                        </div>
+                        <div className='n-rightNav'>
+                            <div className='n-loginButton'>
+                                <img className='p-avatar' src={ require('./img/avatar2.png') } alt=''/>
+                            </div>
+                            <div className='n-submitButton' onClick={ (e) => this.handleCreateButton(e) }>
+                                submit your project!
+                            </div>
+                        </div>
+                        <div className='n-titleContainer'>
+                            <a className='n-title' href='/'>showabel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 
 /*
