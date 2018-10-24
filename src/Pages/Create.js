@@ -81,16 +81,24 @@ export default class Create extends Component {
     render = () => {
         return (
         <div className='c-container'>
+            <div style={{ height: '6em'}}/>
             <div className='c-wrapper'>
-                <div className='c-d-table'>
-                    <div className='c-d-verticalMiddle'>
-                        <div className='c-buttonContainer'>
-                            <button> Project Info </button>
-                            <button> Contributors </button>
-                            <button> Media </button>
-                            <button> Submit </button>
-                        </div>
-                    </div>
+                <div className='c-buttonContainer'>
+                    <button className='c-buttons'> Project Details </button>
+                    <button className='c-buttons'> Contributors </button>
+                    <button className='c-buttons'> Media </button>
+                    <button className='c-buttons'> Finalize </button>
+                </div>
+                <div className='c-inputContainer'>
+                    <div><input className='c-inputForm' type='text' placeholder='Project Name' onChange={ this.handleInput }/></div>
+                    <div><input className='c-inputForm' type='textarea' placeholder='Project Info' onChange={ this.handleInput }/></div>
+                    <div><input className='c-inputForm' type='text' placeholder='Tech Stack' onChange={ this.handleInput }/></div>
+                </div>
+                <div className='c-inputContainer'>
+                    <div><input className='c-inputForm' type='text' placeholder='Contributors' onChange={ this.handleInput }/></div>
+                </div>
+                <div className='c-inputContainer'>
+                    <input className='c-uploadStyle' id='file-1' type="file" name="picture" accept="image/png, image/jpeg" onChange={ this.handleInput }/>
                 </div>
             </div>
         </div>

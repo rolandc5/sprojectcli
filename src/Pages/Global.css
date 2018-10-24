@@ -1,6 +1,9 @@
 .n-container {
     margin: 0;
     padding: 0;
+}
+
+.n-wrapper {
     z-index: 100;
     position: fixed;
     background-color: white;
@@ -13,6 +16,7 @@
     display: flex;
     flex-direction: row;
     text-align: center;
+    justify-content: center;
 }
 
 .n-leftNav {
@@ -49,9 +53,15 @@
 }
 
 .n-loginButton {
-    font-size: 16px;
-    font-weight: bold;
+    width: 2.5em;
+    height: 2.5em;
     margin-right: 1em;
+}
+
+.n-avatarButton {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
 }
 
 .n-login {
@@ -73,8 +83,8 @@
 .n-titleContainer {
     display: block;
     position: absolute;
-    width: 100%;
     top: 19px;
+    visibility: hidden;
 }
 
 .n-title {
@@ -82,6 +92,7 @@
     padding: 0;
     font-size: 24px;
     font-weight: bold;
+    visibility: visible;
 }
 
 
@@ -290,31 +301,33 @@ Create
 .c-container {
     padding: 0;
     margin: 0;
-    height: 89.5vh;
-    display: flex;
-    justify-content: center;
 }
 
 .c-wrapper {
-    border: solid;
     display: flex;
-    height: 100%;
-    width: 50%;
     justify-content: center;
-}
-
-.c-d-table {
-    display: table;
-    height: 100%;
-}
-
-.c-d-verticalMiddle {
-    display: table-cell;
-    vertical-align: middle;
+    flex-direction: column;
+    text-align: center;
 }
 
 .c-buttonContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+}
+
+.c-buttons {
+    margin: .2em;
+    height: 10em;
+    width: 15em;
+}
+
+.c-inputContainer {
+    margin: 2em;
+}
+
+.c-inputForm {
+    width: 20em;
+    height: 1em;
+    margin: .3em;
+    padding: 1em;
 }

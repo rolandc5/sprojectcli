@@ -76,7 +76,7 @@ export default class Projects extends Component {
   render = () => {
     return (
       <div className='p-container'>
-        <div style={{ height: "4em" }}/>
+        <div style={{ height: "5em" }}/>
         <div className='p-wrapper'>
           <div>
             <div className='p-projectsContainer'>

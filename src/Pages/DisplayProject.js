@@ -33,6 +33,7 @@ export default class DisplayProject extends Component {
 	render = () => {
 		return (
 		<div className='d-container'>
+			<div style={{ height: "4.1em" }}/>
 			<div className='d-wrapper'>
 			{ this.state.loading === 0 ? <div  style={{ height: 1000 }}/> :
 			<div className='d-projectContainerCentered'>
